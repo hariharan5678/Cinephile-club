@@ -1,0 +1,72 @@
+<html>
+<head> <center>
+<h1> Film Paradise <h3> </center>
+</head> 
+<br><br>
+<body><h4>
+
+To Join Our Club Fill The Form</h4><br><br>
+<script>
+function validate()
+{
+   let n = document.getElementById("name").value;
+   let g = document.getElementById("account").value;
+   if (n=="")
+    document.getElementById("p").innerHTML="PLEASE ENTER YOUR NAME";
+   if (g=="")
+    document.getElementById("k").innerHTML="PLEASE ENTER A GMAIL ID";
+   else
+    document.getElementById("o").innerHTML="hi "+n+" welcome to our site" ;
+}
+</script>
+<style>
+h4
+{ 
+ overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s steps(40, end),
+    blink-caret .75s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+h1
+{ 
+ color:blue;
+ font-family:"comic sans";
+ border:50;
+}
+body
+{ 
+ background-color:lavender;
+}
+h6
+{
+  color:red;
+  font-family:"comic sans";
+}
+select
+{
+background-color:gold;
+}
+</style>
+<center> <h4> FORM </H4> </center><br>
+<p>Enter your name <input type="text" id="name" ><h6 id="p"></h6>
+Enter a gmail account<input type="text" id="account">@gmail.com <h6 id="k"></h6>
+date of birth <input type="date" > <br><br>
+which is your favourite genre (if you want to select combined genre like "horror thriller" you have to use two selection box)  <br><br> <select size=1 id="genre1" ><option>horror</option><option>thriller</option><option>mystery</option>
+<option>comedy</option><option>action</option></select><select size=2 id="genre" ><option>horror</option><option>thriller</option><option>mystery</option>
+<option>comedy</option><option>action</option></select><br><br>
+gender <br> <br><input type="radio" name="gender" >male  <input type="radio" name="gender" > female <br><br><br>
+<input type="submit" name="submit" onclick="return validate()">
+<p id="o"></p></p>
+</body>
+</html>
+
